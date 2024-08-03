@@ -32,6 +32,7 @@
 	"type": "module",
 	"dependencies": {
 		"express": "^4.19.2",
+		"node-fetch": "^3.3.2",
 		"puppeteer": "^22.15.0",
 		"sass": "^1.77.8"
 	}

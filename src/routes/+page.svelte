@@ -19,9 +19,7 @@
 
                 if (response.status === 404) return;
 
-                const imageUrl = (await response.text())
-                  .toString()
-                  .replace("JSHandle:", "");
+                const imageUrl = await response.text();
 
                 if (imageUrl && !imageUrl.includes("st.prntscr.com")) {
                   images = [
