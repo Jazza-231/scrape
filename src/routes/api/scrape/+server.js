@@ -12,8 +12,13 @@ export async function GET({ url }) {
 
   if (image) {
     const imageUrl = await image.getProperty("src");
+
+    browser.close();
+
     return new Response(imageUrl, { status: 200 });
   } else {
+    browser.close();
+
     return new Response(url, { status: 404 });
   }
 }
